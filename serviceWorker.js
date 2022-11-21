@@ -4,7 +4,7 @@ const assets = [
     '/index.html',
     '/style.css',
     '/script.js',
-    'https://fonts.cdnfonts.com/s/16141/SamsungOne-400.woff'
+    '/https://fonts.cdnfonts.com/s/16141/SamsungOne-400.woff'
 ]
 
 self.addEventListener('install', installEvent => {
