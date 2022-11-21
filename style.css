@@ -150,7 +150,7 @@ button:focus {
     position: absolute;
     border-radius: 50%;
     transform: scale(0);
-    animation: ripple 300ms linear;
+    animation: ripple 200ms linear;
     background: var(--theme-btn-hover);
 }
 
