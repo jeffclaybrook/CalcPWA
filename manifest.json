@@ -1,0 +1,24 @@
+{
+    "short_name": "Calculator",
+    "name": "Calculator application",
+    "description": "Calculator application created by Jeffrey Claybrook",
+    "start_url": "/",
+    "scope": "/",
+    "background_color": "#F1F4FB",
+    "display": "standalone",
+    "theme_color": "#F1F4FB",
+    "icons": [
+        {
+            "src": "images/icon-192.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "maskable"
+        },
+        {
+            "src": "images/icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any"
+        }
+    ]
+}

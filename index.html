@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Calculator App">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#F1F4FB">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F1F4FB">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#202A30">
+    <meta name="description" content="Calculator app created by Jeff Claybrook">
+    <title>Calculator</title>
+    <style>
+        @font-face {
+            font-family: 'samsungone';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.cdnfonts.com/s/16141/SamsungOne-400.woff) format('woff');
+        }
+    </style>
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" href="images/icon-192.png" sizes="192x192">
+    <link rel="icon" href="images/icon-512.png" sizes="512x512">
+    <link rel="apple-touch-icon" href="images/icon-192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="images/icon-512.png" sizes="512x512">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="calculator">
+
+        <button class="theme-btn" id="theme-btn" title="Toggle light and dark" aria-label="auto" aria-live="polite" onclick="toggleTheme()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="sun-and-moon" aria-hidden="true">
+                <mask class="moon" id="moon-mask">
+                    <rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+                    <circle cx="24" cy="10" r="6" fill="black"></circle>
+                </mask>
+                <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"></circle>
+                <g class="sun-beams" stroke="currentColor">
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </g>
+            </svg>
+        </button>
+
+        <input type="text" class="screen" id="screen" placeholder="0" readonly>
+
+        <button class="symbol" onclick="wipe()">C</button>
+        <button class="symbol" onclick="show('(')">(</button>
+        <button class="symbol" onclick="show(')')">)</button>
+        <button class="symbol" onclick="show('/')">÷</button>
+
+        <button class="number" onclick="show('7')">7</button>
+        <button class="number" onclick="show('8')">8</button>
+        <button class="number" onclick="show('9')">9</button>
+        <button class="symbol" onclick="show('*')">×</button>
+
+        <button class="number" onclick="show('4')">4</button>
+        <button class="number" onclick="show('5')">5</button>
+        <button class="number" onclick="show('6')">6</button>
+        <button class="symbol" onclick="show('+')">+</button>
+
+        <button class="number" onclick="show('1')">1</button>
+        <button class="number" onclick="show('2')">2</button>
+        <button class="number" onclick="show('3')">3</button>
+        <button class="symbol" onclick="show('-')">-</button>
+
+        <button class="number" onclick="show('%')">%</button>
+        <button class="number" onclick="show('0')">0</button>
+        <button class="number" onclick="show('.')">.</button>
+        <button class="symbol" onclick="calc('=')">=</button>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
