@@ -38,7 +38,7 @@ const addRipple = (e) => {
     const diameter = Math.max(element.clientWidth, element.clientHeight);
     const radius = diameter / 2;
 
-    circle.style.width = circle.style.height = `${dia}px`;
+    circle.style.width = circle.style.height = `${diameter}px`;
     circle.style.left = `${e.clientX - element.offsetLeft - radius}px`;
     circle.style.top = `${e.clientY - element.offsetTop - radius}px`;
     circle.classList.add('ripple');
