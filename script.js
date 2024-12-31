@@ -61,7 +61,7 @@ const show = (n) => screen.value += n;
 const calc = () => {
     const val = eval(screen.value);
     const num = parseFloat(val);
-    const res = num.toFixed(8);
+    const res = num;
     screen.value = res;
 }
 
